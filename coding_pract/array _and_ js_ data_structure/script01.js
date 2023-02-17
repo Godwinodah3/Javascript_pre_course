@@ -21,10 +21,10 @@ console.log(tip);
 //console.log(total);
 */
 
-
+/*
 //object data structure 
 
-const odahFamilyTree = {
+const godwin = {
     firstname: "paul",
     lastname: "anthony",
     job: "student",
@@ -33,39 +33,69 @@ const odahFamilyTree = {
 
 };
 
-console.log(odahFamilyTree);
+console.log godwin);
 
 //dot notation
-console.log(odahFamilyTree.job);
+console.log godwin.job);
 
 
 //bracket notation
-console.log(odahFamilyTree['job']);
+console.log godwin['job']);
 
 //using the bracket notation to literally selecct keyword in the object decleration by putting expression
 const bornKey = "born";
-console.log(odahFamilyTree['first' + bornKey]);
-console.log(odahFamilyTree['second' + bornKey]);
-console.log(odahFamilyTree['third' + bornKey]);
+console.log godwin['first' + bornKey]);
+console.log godwin['second' + bornKey]);
+console.log godwin['third' + bornKey]);
 
 
-const bigFamily = prompt('my family odahFamilyTree is fun firstname, lastname, job, age3');
+const bigFamily = prompt('my family godwin is fun firstname, lastname, job, age3');
 
-console.log(odahFamilyTree[bigFamily]);
+console.log godwin[bigFamily]);
 
 
 //adding element to the object via dot and bracket notation
-/*
-odahFamilyTree.location = 'kogi state';
-odahFamilyTree['twitter'] = 'godwinodah3';
+/* godwin.location = 'kogi state'; godwin['twitter'] = 'godwinodah3';
 
-if (odahFamilyTree[bigFamily]) {
-    console.log(odahFamilyTree[bigFamily])
+if  godwin[bigFamily]) {
+    console.log godwin[bigFamily])
 } else {
     console.log('wrong choice chosee again');
 }
 
-//console.log(odahFamilyTree);
+//console.log godwin);
 */
 //challneges
-console.log(`${odahFamilyTree.firstname} has ${odahFamilyTree.friends.length} friend and his best of them is  ${odahFamilyTree.friends[0]}`);
+//console.log(`$ godwin.firstname} has $ godwin.friends.length} friend and his best of them is  $ godwin.friends[0]}`);
+
+
+//OBJECT METHOD
+
+const godwin = {
+    firstname: "paul",
+    lastname: "anthony",
+    job: "student",
+    birthYear: 2003,
+    friends: ["john", "Timothy", "Emeka"],
+    hadDriversLicense: true,
+
+    //calcage: function (birthYear) {
+    //    return 2023 - birthYear;
+    //}
+    //[this] keyword is used to reference to an object in a function
+    // calcage: function () {
+    //console.log(this);
+    //   return 2023 - this.birthYear;
+    // }
+
+    calcage: function () {
+
+        return 2023 - this.birthYear;
+    }
+
+};
+
+console.log(godwin.calcage());
+
+//console.log(godwin['calcage'](2003));
+
