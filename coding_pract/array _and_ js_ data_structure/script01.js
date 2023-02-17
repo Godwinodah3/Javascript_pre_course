@@ -36,11 +36,11 @@ const odahFamilyTree = {
 console.log(odahFamilyTree);
 
 //dot notation
-console.log(odahFamilyTree.age);
+console.log(odahFamilyTree.job);
 
 
 //bracket notation
-console.log(odahFamilyTree['age']);
+console.log(odahFamilyTree['job']);
 
 //using the bracket notation to literally selecct keyword in the object decleration by putting expression
 const bornKey = "born";
@@ -49,9 +49,9 @@ console.log(odahFamilyTree['second' + bornKey]);
 console.log(odahFamilyTree['third' + bornKey]);
 
 
-//const bigFamily = prompt('my family odahFamilyTree is fun firstborn, secondborn, thirdborn, age3');
+const bigFamily = prompt('my family odahFamilyTree is fun firstname, lastname, job, age3');
 
-//console.log(odahFamilyTree[bigFamily]);
+console.log(odahFamilyTree[bigFamily]);
 
 
 //adding element to the object via dot and bracket notation
