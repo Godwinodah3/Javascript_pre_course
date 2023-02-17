@@ -72,12 +72,14 @@ if  godwin[bigFamily]) {
 //OBJECT METHOD
 
 const godwin = {
-    firstname: "paul",
+    firstname: "Dave",
     lastname: "anthony",
     job: "student",
     birthYear: 2003,
     friends: ["john", "Timothy", "Emeka"],
-    hadDriversLicense: true,
+    hadDriversLicense: false,
+
+
 
     //calcage: function (birthYear) {
     //    return 2023 - birthYear;
@@ -88,14 +90,59 @@ const godwin = {
     //   return 2023 - this.birthYear;
     // }
 
-    calcage: function () {
 
-        return 2023 - this.birthYear;
+    //using [this] keyword to save the calculated value of the age 
+    calcage: function () {
+        this.age = 2023 - this.birthYear;
+        return this.age;
+    },
+
+    getsummary: function () {
+        return `${this.firstname} is a ${this.calcage()} year old ${this.job}   ${this.hadDriversLicense ? 'a' : "no"} has drivers lincence`;
     }
 
 };
 
 console.log(godwin.calcage());
-
+console.log(godwin.age);
+console.log(godwin.age);
+console.log(godwin.age);
 //console.log(godwin['calcage'](2003));
 
+console.log(godwin.getsummary());
+
+
+//console.log(`${godwin.firstname} is a ${godwin.age} years old ${godwin.job} and he has a drivers linsence  ${godwin.hadDriversLicense}`)
+
+//OBJECT CODING CHALLENGE 
+
+const Mark = {
+    fullName: "Mark Miller",
+    height: 1.69,
+    mass: 78,
+
+    calCBMI: function () {
+        this.bmi1 = this.mass / (this.height ** 2);
+        return this.bmi1;
+    }
+}
+
+const John = {
+    fullName: "John Smith",
+    height: 1.95,
+    Mass: 92,
+    calCBMI: function () {
+        this.bmi2 = this.Mass / (this.height * this.height);
+        return this.bmi2;
+    }
+
+}
+
+
+
+console.log(Mark.calCBMI());
+console.log(Mark.bmi1);
+console.log(John['calCBMI']());
+console.log(John.bmi2);
+
+console.log(`${Mark.fullName} ${Mark.calCBMI()} is higher than ${John['fullName']} ${John.calCBMI()}`);
