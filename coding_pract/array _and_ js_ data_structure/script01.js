@@ -145,4 +145,12 @@ console.log(Mark.bmi1);
 console.log(John['calCBMI']());
 console.log(John.bmi2);
 
-console.log(`${Mark.fullName} ${Mark.calCBMI()} is higher than ${John['fullName']} ${John.calCBMI()}`);
+//console.log(`${Mark.fullName} ${Mark.calCBMI()} is higher than ${John['fullName']} ${John.calCBMI()}`);
+
+//conditonal statement to determine whose BMI is higher
+if (Mark.bmi1 > John.bmi2) {
+    console.log(`${Mark.fullName} ${Mark.calCBMI()} is higher than ${John['fullName']} BMI ${John.calCBMI()}`);
+
+} else if (John.bmi2 > Mark) {
+    console.log(`${John.fullName} ${John.calCBMI()} is higher than ${Mark['fullName']} BMI ${Mark.calCBMI()}`);
+}
