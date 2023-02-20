@@ -40,20 +40,30 @@ function playRound(playerSelection, computerSelection) {
 
     else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection.toUpperCase() === 'SCISSORS') {
         return 'you lose! sicssors beat paper';
-    } else if (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection.toUpperCase() === 'ROCK') {
+    } else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection.toUpperCase() === 'ROCK') {
         return 'you win! paper  beats rock';
     }
 
 
     else {
-        return 'invalid input';
+        return ('invalid input');
+        //return null
     }
 
 
 
 }
+/*
 
-const playerSelection = "rock";
+const playerSelection = "ock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 //getComputerChoice();
+*/
+
+function game() {
+    let playerSelection, computerSelection, result;
+    let playerWins = 0;
+    let computerWins = 0;
+
+}
