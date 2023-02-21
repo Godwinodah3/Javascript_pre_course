@@ -65,5 +65,15 @@ function game() {
     let playerSelection, computerSelection, result;
     let playerWins = 0;
     let computerWins = 0;
+    const selection = ['ROCK', 'PAPER', 'SC0ISSORS'];
 
+    for (let i = 0; i < 5; i++) {
+        playerSelection = prompt();
+        computerSelection = getComputerChoice();
+
+        //confirm user input 
+        while (!(selection.includes(playerSelection.toUpperCase()))) {
+            playerSelection = prompt();
+        }
+    }
 }
