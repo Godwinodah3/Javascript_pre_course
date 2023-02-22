@@ -121,15 +121,17 @@ for (i = 0; i < bill.length; i++) {
 
 console.log(bill, tips, total);
 
-// const calAverage = function (arr) {
-// 	let sum = 0;
-// 	let arr = arr.length
-// 	for (let i = 0; i < arr; arr++) {
-// 		sum = sum + arr[i];
-// 	}
-// 	return (sum / arr[i])
 
-// }
+//building a generic function 
+const calAverage = function (arr) {
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		//sum houses the number after each iteration
+		sum = sum + arr[i];
+	}
+	//console.log(sum);
+	return (sum / arr.length)
+}
 
-// const dave = calAverage(total);
-// console.log(dave);
+//const dave = calAverage(total);
+console.log(calAverage(tips));
