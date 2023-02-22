@@ -13,10 +13,8 @@ const dave = [
 	'Odah',
 	2023 - 2003,
 	'student',
-	['john', 'oluwatemi', 'Emmanuel'],
-	true,
-	false
-];
+	['john', 'oluwatemi', 'Emmanuel']
+]
 const types = [];
 
 for (let i = 0; i < dave.length; i++) {
@@ -43,9 +41,9 @@ console.log(ages);
 
 
 //continue
-console.log(`......-------......only_strings......`);
+console.log(`......-------......only_strings......`)
 for (let i = 0; i < dave.length; i++) {
-	if (typeof dave[i] !== 'boolean') continue;
+	if (typeof dave[i] !== 'string') continue;
 
 	console.log(dave[i], typeof dave[i])
 
@@ -53,7 +51,7 @@ for (let i = 0; i < dave.length; i++) {
 
 
 //break
-console.log(`......-------......break with number statement......`);
+console.log(`......-------......break with number statement......`)
 for (let i = 0; i < dave.length; i++) {
 	if (typeof dave[i] === 'number') break;
 
@@ -64,4 +62,19 @@ for (let i = 0; i < dave.length; i++) {
 
 
 
-lop
+//looping backward and loops in loops
+
+
+for (let i = dave.length - 1; i >= 0; i--) {
+	console.log(i, dave[i]);
+}
+
+//loops in loops
+
+for (let jumping = 1; jumping < 4; jumping++) {
+	console.log(`jumping exercise${jumping}`);
+
+	for (let skinnping = 1; skinnping < 6; skinnping++) {
+		console.log(`Eerrcise${jumping} ......skinping exercise......${skinnping}`)
+	}
+}
